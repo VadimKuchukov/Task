@@ -1,0 +1,23 @@
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        Soldier soldier1 = new Soldier(1);
+        Soldier soldier2 = new Soldier(2);
+        Soldier[] array = new Soldier[] {soldier1, soldier2};
+        while (soldier1.hp != 0 && soldier2.hp != 0) {
+
+            int first = (int) (Math.random() * 2);
+            int second = (int) (Math.random() * 2);
+            if (first != second) {
+                Soldier.hit(array[first], array[second]);
+            }
+        }
+        if (soldier1.hp != 0) {
+            System.out.println("Победил " + soldier1);
+        }
+        else System.out.println("Победил " + soldier2);
+    }
+
+
+}
