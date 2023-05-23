@@ -1,0 +1,27 @@
+public class Soldier {
+    int hp = 100;
+    int id;
+
+    Soldier (int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Soldier{" +
+                "id=" + id +
+                ", hp=" + hp +
+                '}';
+    }
+
+    public static void hit(Soldier soldier1, Soldier soldier2) {
+        soldier2.hp -= 20;
+        System.out.println(soldier1.toString() + " атаковал " + soldier2);
+        System.out.println();
+    }
+    public static void get(Soldier soldier1, Soldier soldier2) {
+        soldier2.hp -= 20;
+        System.out.println(soldier1.toString() + " атаковал " + soldier2);
+        System.out.println();
+    }
+}
